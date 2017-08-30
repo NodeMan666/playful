@@ -1,0 +1,10 @@
+ErrorDocument 404 /404.php
+Header add "disablevcache" "true"
+
+<ifModule mod_deflate.c>  
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript  
+</ifModule>  
+
+<FilesMatch "\.(jpg|jpeg|png|gif|swf|js|css)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>

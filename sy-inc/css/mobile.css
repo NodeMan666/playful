@@ -1,0 +1,18 @@
+html,body,div { font-size: 15px; } 
+.mobileclear { float: none !important; clear: right; } 
+.mobilehide { display: none !important; } 
+
+#page-wrapper { width: 100%; margin: auto;} 
+#ssheaderinner  { width: 100%; margin: auto;} 
+
+.welcomename { display: none; } 
+#shopmenuinner { width: 100%; } 
+#main_container { width: 100%; } 
+#viewcartinner .storeProduct img { max-height: 100px !important; width: auto !important; } 
+#checkoutaddresswithship { width: auto; float: none; } 
+#shippingaddressside { width: auto; float: none;  } 
+
+#viewcarttop { width: 100% !important; height: 1000px; text-align: center;  float: none; left: auto; margin-left: 0;  } 
+#photoprods, #photocrop, #photopackagecontainer, #paymentdiv { width: 100% !important; margin-left: 0px !important; left: 0px !important; top: 10px !impportant; box-shadow: none; } 
+#photoprodsinner { padding: 4px !important; } 
+#contentUnderMenu { padding: 4px; } 

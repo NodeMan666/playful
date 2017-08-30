@@ -1,0 +1,63 @@
+ 
+ 
+ 
+ 			<svg class="svg-image-blur"  width="<?php print $dsize[0];?>" height="<?php print $dsize[1];?>" style="position: absolute; background: #000000; top: 0px; opacity: .5;display: none;">
+				<image x="-350" y="-300"  class="svg-image" width="<?php print $dsize[0] * 2;?>" height="<?php print $dsize[1] * 2;?>" xlink:href="<?php print getimagefile($fphoto,'pic_large');?>" />
+
+				<filter id="blur-effect-1">
+					<feGaussianBlur stdDeviation="4" />
+				</filter>
+			</svg> 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <style>
+.svg-image-blur {width: 1200px; left: 0; background: #000000;}
+.svg-image  { filter:url(#blur-effect-1); }
+	
+</style>
+<svg class="svg-image-blur"  width="1600" height="600" >
+    <image x="-350" y="-300"  class="svg-image" width="2000" height="2000"  xlink:href="http://aaa.sytist.com/clients/sy-photos/2014/12/04/10/large_e416472a3_18683205_xl.jpg" />
+
+    <filter id="blur-effect-1">
+        <feGaussianBlur stdDeviation="2" />
+		<feColorMatrix type="matrix" values=".343 .669 .119 0 0 .249 .626 .130 0 0 .172 .334 .111 0 0 .000 .000 .000 1 0" />
+    </filter>
+</svg> 
+
+
+
+
+
+
+<style>
+#blur {
+  /* Prefix free isn't picking up this one */
+  -webkit-filter: url('#blur');
+  filter: url('#blur');
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  background-size: cover;
+  opacity: 0.4;
+}
+</style>
+<img src="http://aaa.sytist.com/clients/sy-photos/2014/12/04/10/large_e416472a3_18683205_xl.jpg" id="blur" >
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="5" />
+    </filter>
+  </defs>
+</svg>
+
