@@ -598,7 +598,8 @@ decimals = (<?php print $store['price_decimals'];?>);
 		<?php } ?>
 </div>
 <div class="right pc textright checkoutpagebutton onlistpage">
-	<a class="checkoutcart" href="https://www.playfulportraits.com/clients/index.php?view=checkout">Proceed to Checkout</a>	 
+	<!-- <a class="checkoutcart" href="https://www.playfulportraits.com/clients/index.php?view=checkout">Proceed to Checkout</a>	  -->
+	<a href="/index.php?view=cart" class="checkoutcart" onclick="viewcart(); return false;">Continue to Checkout</a>
 	<div class="clear"></div>
 </div>
 <script type="text/javascript">

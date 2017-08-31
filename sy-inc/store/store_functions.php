@@ -1945,11 +1945,11 @@ function showPhotoPackage($pack,$cart) {
 	$name = $prodary[1];
 
 	?>
-	<div class="cartitem" id="cart-<?php print MD5($cart['cart_id']);?>">
+	<div class="cartitem" id="cart-<?php print MD5($cart['cart_id']);?>" style="border-top: 2px solid #0f0f0f;">
 
 		<div class="thumbnail  nofloatsmall"><?php //print getPagePreview($date,"thumb"); ?></div>
 		<div class="product  nofloatsmall">
-			<div class="name"><?php if(!empty($cart['cart_print_credit'])) { 
+			<div class="name center"><b><?php if(!empty($cart['cart_print_credit'])) { 
 				if($cart['cart_bonus_coupon'] > 0) { 
 					print _bonus_coupon_.": ";
 				} else { 
@@ -1961,7 +1961,7 @@ function showPhotoPackage($pack,$cart) {
 			print $mainpack['package_name']." > "; 
 			}
 			//print $name;
-			print (substr($cart['cart_product_name'], 11));?></div>
+			print (substr($cart['cart_product_name'], 11));?></b></div>
 
 			<?php if($cart['cart_pre_reg'] > 0) { ?>
 			<div class="pc">
@@ -2588,8 +2588,6 @@ function showPhotoProduct($cart,$package_photo,$parent) {
 
 					</div>
 					<?php } else {	?>
-					<?php if($cart['cart_package_photo'] > 0) { ?><div class="topname"><?php print $parent['cart_product_name'];?></div><?php } ?>
-					<?php if($cart['cart_product_photo'] > 0) { ?><div class="topname"><?php print $pdate['date_title'];?></div><?php } ?>
 					<div class="name"><?php print $cart['cart_product_name'];?></div>
 					<?php } ?>
 
@@ -2744,23 +2742,7 @@ function showPhotoProduct($cart,$package_photo,$parent) {
 
 			<?php if($pic['pic_id'] > 0) { ?>
 				<div class="pc"><?php print $pic['pic_org'];?></div>
-				<div class="pc"><?php print _in_;?> <?php print "<a href=\"".$setup['temp_url_folder']."".$setup['content_folder']."".$date['cat_folder']."/".$date['date_link']."/\">".$date['date_title']."</a>";?> 
-				<?php if(!empty($sub['sub_id'])) { ?>
 
-				<?php 
-					$ids = explode(",",$sub['sub_under_ids']);
-					foreach($ids AS $val) { 
-						if($val > 0) { 
-							$upsub = doSQL("ms_sub_galleries", "*", "WHERE sub_id='".$val."' ");
-							print " > <a href=\"".$setup['temp_url_folder'].$setup['content_folder']."".$date['cat_folder']."/".$date['date_link']."/?sub=".$upsub['sub_link']."\">".$upsub['sub_name']."</a>  ";
-						}
-					}
-					
-					print " > <a href=\"".$setup['temp_url_folder'].$setup['content_folder']."".$date['cat_folder']."/".$date['date_link']."/?sub=".$sub['sub_link']."\"><b>".$sub['sub_name']."</b></a>";
-			?>
-				<?php } ?>
-
-				</div>
 			<?php } ?>
 			<?php if(($pic['pic_id'] > 0)&&($cart['cart_allow_notes'] == "1")==true) { ?>
 			<?php cartNotes($cart);?>
